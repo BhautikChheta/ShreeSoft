@@ -1,0 +1,73 @@
+
+.card__container {
+    position: relative;
+    width: 70%;
+    margin: 0 auto;
+}
+.who_we_are1 {
+    position: relative;
+    width: 25%;
+}
+
+.img__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    font-size: 1.5em;
+    box-shadow: 0 5px 10px 0 rgba(255, 255, 255, 0.6), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.img {
+    display: block;
+    width: 100%;
+    box-shadow: inset 0 0 0 1000px rgba(0,0,0,.26);
+}
+
+.image__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.overlay__blur {
+    backdrop-filter: blur(2px);
+}
+
+.image__overlay:hover {
+    cursor: pointer;
+    opacity: 1;
+}
+
+.overlay_title {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.overlay_description {
+    font-size: 1.25em;
+    margin-top: 0.25em;
+}
+
+.image__overlay > *{
+    padding: 0px 20px;
+    text-align: center;
+    transform: translateY(20px);
+    transition: transform 0.5s;
+
+}
+
+.image__overlay:hover > *{
+    transform: translateY(0px);
+}
